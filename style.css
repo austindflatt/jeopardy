@@ -1,4 +1,27 @@
 body {
-    background-color: black;
-    color: #FFF
+    background-color: #FFF;
+    color: #000;
+}
+
+.grid-outer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.single-box {
+    cursor: pointer;
+    background-color: #01309e;
+    color: white;
+    border: 2px solid black;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    padding: 64px;
+    transition: .3s;
+}
+
+.single-box:hover {
+    background-color: #01309ed9;
+    border: 2px solid yellow;
 }
