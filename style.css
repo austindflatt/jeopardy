@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
     background-color: #FFF;
     color: #000;
@@ -11,14 +13,17 @@ body {
     border-bottom: 2px solid black;
     border-left: 2px solid black;
     border-right: 2px solid black;
+    max-width: 1400px;
 }
 
 .single-box {
     cursor: pointer;
     background-color: #01309e;
-    color: white;
+    color: #e7aa5c;
+    height: 40px;
     border: 2px solid black;
-    font-size: 27px;
+    font-family: Bebas Neue;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     padding: 64px;
@@ -27,5 +32,6 @@ body {
 
 .single-box:hover {
     background-color: #01309ed9;
+    color: #FFF;
     border: 2px solid yellow;
 }

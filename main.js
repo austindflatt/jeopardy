@@ -1,12 +1,14 @@
 const body = document.querySelector('body');
+const heading = document.querySelector('#heading');
 const headingTitle = document.createElement('h1');
 headingTitle.innerHTML = `Jeopardy! Your Score is: $${null}`;
-body.append(headingTitle);
+heading.append(headingTitle);
 
 // build the grid
+const boardArea = document.querySelector('#board-area');
 const boardGrid = document.createElement('div');
 boardGrid.innerHTML = `<div id="grid" class="grid-outer"></div>`;
-body.append(boardGrid);
+boardArea.append(boardGrid);
 const boardGridInner = document.querySelector('#grid')
 
 // create a for loop that loops 5 times to create rows
@@ -38,5 +40,13 @@ for (i = 0; i < 5; i++) {
     const row1200 = document.createElement('div');
     row1200.classList.add('single-box');
     row1200.innerHTML = `$1,200`;
-    boardGridInner.append(row1200)
+    boardGridInner.append(row1200);
 }
+
+// question area
+const questionArea = document.createElement('h1');
+questionArea.innerHTML = `Question goes here`;
+boardArea.append(questionArea);
+
+// answer input area
+const answerInput = document.querySelector('#answer-input');
