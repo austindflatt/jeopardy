@@ -9,15 +9,16 @@
 </head>
 <body>
     <div class="container">
-        <div id="heading"></div>
-        <div id="board-area"></div>
-        <div id="answer-area">
+        <div id="heading" class="heading"></div>
+        <div id="question-area" class="question-area"></div>
+        <div id="answer-area" class="answer-area">
             <form id="answer-input-form">
-                <label>Your answer</label>
+                <label>Your answer:</label>
                 <input type="text" id="answer-input" placeholder="Enter something">
-                <button type="submit">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </form>
-        </div>
+        </div><br />
+        <div id="board-area"></div>
     </div>
     <script src="main.js"></script>
     <script src="jeopardy.json"></script>

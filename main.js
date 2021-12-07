@@ -1,7 +1,8 @@
 const body = document.querySelector('body');
 const heading = document.querySelector('#heading');
 const headingTitle = document.createElement('h1');
-headingTitle.innerHTML = `Jeopardy! Your Score is: $${null}`;
+headingTitle.innerHTML = `<img src="logo.png" height="100px" /><br />
+Your Score is: <span class="score">$${null}</span>`;
 heading.append(headingTitle);
 
 // build the grid
@@ -44,9 +45,47 @@ for (i = 0; i < 5; i++) {
 }
 
 // question area
-const questionArea = document.createElement('h1');
-questionArea.innerHTML = `Question goes here`;
-boardArea.append(questionArea);
+const questionArea = document.querySelector('#question-area');
+const questionText = document.createElement('h1');
+questionText.innerHTML = `Question goes here`;
+questionArea.append(questionText);
+
+// function to get question
+async function getQuestion() {
+    const httpResponse = await fetch('jeopardy.json');
+    const data = await httpResponse.json();
+    // create empty array for each value of questions
+    const oneHundred = [];
+    const twoHundred = [];
+    const fourHundred = [];
+    const sixHundred = [];
+    const twelveHundred = [];
+    // end arrays
+    for(const i of data) {
+        let value = i.value;
+        console.log(value)
+        let info = i;
+        console.log(info)
+        // push all data into empty arrays above
+        if (value === "$100") {
+            oneHundred.push(i);
+        }
+        if (value === "$200") {
+            twoHundred.push(i);
+        }
+        if (value === "$400") {
+            fourHundred.push(i);
+        }
+        if (value === "$600") {
+            sixHundred.push(i);
+        }
+        if (value === "$1,200") {
+            twelveHundred.push(i);
+        }
+    }
+};
 
 // answer input area
 const answerInput = document.querySelector('#answer-input');
+
+getQuestion();
