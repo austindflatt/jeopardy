@@ -47,7 +47,7 @@ for (i = 0; i < 5; i++) {
 // question area
 const questionArea = document.querySelector('#question-area');
 const questionText = document.createElement('h1');
-questionText.innerHTML = `Question goes here`;
+questionText.innerHTML = ``;
 questionArea.append(questionText);
 
 // function to get question
@@ -83,6 +83,29 @@ async function getQuestion() {
             twelveHundred.push(i);
         }
     }
+    
+    const singleBox = document.querySelectorAll('.single-box');
+    singleBox.forEach(element =>
+    element.addEventListener('click', function() {
+        console.log('box was clicked!');
+        let random = Math.floor(Math.random() * 1000);
+        if (element.innerText === '$100') {
+            console.log('this box value is $100');
+        }
+        if (element.innerText === '$200') {
+            console.log('this box value is $200');
+        }
+        if (element.innerText === '$400') {
+            console.log('this box value is $400');
+        }
+        if (element.innerText === '$600') {
+            console.log('this box value is $600');
+        }
+        if (element.innerText === '$1,200') {
+            console.log('this box value is $1,200');
+        }
+    })
+    )
 };
 
 // answer input area
