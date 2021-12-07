@@ -44,11 +44,9 @@ for (i = 0; i < 5; i++) {
     boardGridInner.append(row1200);
 }
 
-// question area
+// question text area
 const questionArea = document.querySelector('#question-area');
 const questionText = document.createElement('h1');
-questionText.innerHTML = ``;
-questionArea.append(questionText);
 
 // function to get question
 async function getQuestion() {
@@ -91,18 +89,34 @@ async function getQuestion() {
         let random = Math.floor(Math.random() * 1000);
         if (element.innerText === '$100') {
             console.log('this box value is $100');
+            question100 = oneHundred[random].question
+            console.log(question100);
+            questionText.innerHTML = `${question100}`;
+            questionArea.append(questionText);
         }
         if (element.innerText === '$200') {
             console.log('this box value is $200');
+            question200 = twoHundred[random].question
+            questionText.innerHTML = `${question200}`;
+            questionArea.append(questionText);
         }
         if (element.innerText === '$400') {
             console.log('this box value is $400');
+            question400 = fourHundred[random].question
+            questionText.innerHTML = `${question400}`;
+            questionArea.append(questionText);
         }
         if (element.innerText === '$600') {
             console.log('this box value is $600');
+            question600 = sixHundred[random].question
+            questionText.innerHTML = `${question600}`;
+            questionArea.append(questionText);
         }
         if (element.innerText === '$1,200') {
             console.log('this box value is $1,200');
+            question1200 = twelveHundred[random].question
+            questionText.innerHTML = `${question1200}`;
+            questionArea.append(questionText);
         }
     })
     )
