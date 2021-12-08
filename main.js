@@ -4,10 +4,10 @@ const headingTitle = document.createElement('h1');
 let score = localStorage.getItem('score') || 0;
 if (score >= 0) {
     headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-    Your Score is: <span class="score">$${score.toLocaleString()}</span>`;
+    Your Score is: <span class="score">$${score}</span>`;
 } else {
     headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-    Your Score is: <span class="incorrect-negative">$${score.toLocaleString()}</span>`;
+    Your Score is: <span class="incorrect-negative">$${score}</span>`;
 }
 heading.append(headingTitle);
 
@@ -86,7 +86,7 @@ async function getQuestion() {
     const fourHundred = [];
     const sixHundred = [];
     const twelveHundred = [];
-
+    // use for of loop
     for(const i of data) {
         let value = i.value;
         let info = i;
@@ -186,12 +186,12 @@ async function getQuestion() {
             console.log(score);
             if (score >= 0) {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-                Your Score is: <span class="score">$${score.toLocaleString()}</span>`;
+                Your Score is: <span class="score">$${score}</span>`;
             } else {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-                Your Score is: <span class="incorrect-negative">$${score.toLocaleString()}</span>`;
+                Your Score is: <span class="incorrect-negative">$${score}</span>`;
             }
-            localStorage.setItem('score', score.toLocaleString());
+            localStorage.setItem('score', score);
         } else {
             questionText.innerHTML = `<span class="incorrect-negative">Incorrect!</span> The correct answer was "${answer}"`;
             questionArea.append(questionText);
@@ -201,12 +201,12 @@ async function getQuestion() {
             console.log(score);
             if (score >= 0) {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-                Your Score is: <span class="score">$${score.toLocaleString()}</span>`;
+                Your Score is: <span class="score">$${score}</span>`;
             } else {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
-                Your Score is: <span class="incorrect-negative">$${score.toLocaleString()}</span>`;
+                Your Score is: <span class="incorrect-negative">$${score}</span>`;
             }
-            localStorage.setItem('score', score.toLocaleString());
+            localStorage.setItem('score', score);
         }
     })
 };
