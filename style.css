@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans&display=swap');
 
 body {
-    background: #f5f5f5;
-    color: #000;
-    font-family: Bebas Neue;
+    background: #212121;
+    color: #FFF;
+    font-family: Work Sans;
+}
+
+h1 {
+    text-shadow: 2px 2px #000;
 }
 
 .container {
@@ -40,10 +44,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    margin-bottom: 55px;
 }
 
 .single-box {
@@ -56,6 +61,7 @@ body {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    text-shadow: 2px 2px #000;
     padding: 64px;
     transition: .3s;
 }
@@ -73,16 +79,16 @@ label {
 input {
     background: transparent;
     font-size: 28px;
-    font-family: Bebas Neue;
-    color: #000;
+    font-family: Work Sans;
+    color: #FFF;
     border: none;
     margin-bottom: 30px;
 }
 
 input::placeholder {
-    color: #000;
+    color: #FFF;
     opacity: .5;
-    font-family: Bebas Neue;
+    font-family: Work Sans;
 }
 
 input:focus {
@@ -100,23 +106,62 @@ input:-webkit-autofill:active {
 
 .button {
     height: 40px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     position: relative;
-    font-family: Bebas Neue;
-    background-color: #373737;
+    font-family: Work Sans;
+    background-color: #01309e;
     color: #FFF;
     border-radius: 4px;
     padding: 6px 35px;
     transition: opacity 1s;
     border-style: none;
     cursor: pointer;
+    transition: .3s;
 }
 
-.a:hover {
+.button:hover {
+    background-color: #e7aa5c;
+    color: #FFF;
+}
+
+a {
+    color: #e7aa5c;
+    transition: .3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF;
 }
 
 .score {
     color: rgb(49, 199, 109);
+    font-weight: bold;
+}
+
+.incorrect-negative {
+    color: rgb(199 49 49);
+}
+
+.clear {
+    cursor: default;
+    background-color: #01309e;
+    height: 40px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 64px;
+    transition: .3s;
+}
+
+.clear:hover {
+    background-color: #01309e;
+    border: 2px solid black
+}
+
+.footer {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
 }
