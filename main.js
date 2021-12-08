@@ -182,7 +182,7 @@ async function getQuestion() {
             questionArea.append(questionText);
             correctMp3.play();
             answerInput.value = '';
-            score = score + questionValue
+            score = Number(score) + Number(questionValue)
             console.log(score);
             if (score >= 0) {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
@@ -197,7 +197,7 @@ async function getQuestion() {
             questionArea.append(questionText);
             outOfTime.play();
             answerInput.value = '';
-            score = score - questionValue
+            score = Number(score) - Number(questionValue)
             console.log(score);
             if (score >= 0) {
                 headingTitle.innerHTML = `<img src="images/logo.png" height="100px" /><br /><br />
