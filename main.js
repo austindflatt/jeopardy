@@ -178,7 +178,7 @@ async function getQuestion() {
     answerInputForm.addEventListener('submit', function(event) {
         event.preventDefault();
         if (answerInput.value === answer) {
-            questionText.innerHTML = `Correct!`;
+            questionText.innerHTML = `<span class="score">Correct!</span>`;
             questionArea.append(questionText);
             correctMp3.play();
             answerInput.value = '';
